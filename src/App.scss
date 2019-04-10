@@ -1,0 +1,255 @@
+
+//############ reactIcon ######################################################################
+div.total-height {
+  text-align: center;
+  width: 15vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 10vmin;
+    pointer-events: none;
+  }
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 10vh;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// foto #####################################
+div.foto-container {
+  border: 1px solid black;
+
+  div {
+    margin: 3vw 12vw;
+    width: 250px;
+    height: 245px;
+    // 1066x1600
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// ## profile-text ###################################
+div.profile-text {
+  position: relative;
+  // text-align: center;
+  left: 40vw;
+  top: -20vw;
+  border: 1px solid red;
+  width: 35vw;
+
+  p.wellcome-text {
+    width: 20vw;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+      typing 7s steps(25, end),
+      blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 20vw }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+}
+
+
+
+// social-icons ############################################################
+div.social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vw;
+    position: fixed;
+    top: 20vw;
+    // left: -4vw;
+    left: 5vw;
+    z-index: 2;
+
+    li {
+      list-style-type: none;
+      width: 2.5vw;
+      height: 2.5vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: blue;
+      border-radius: 15%;
+      transition: padding-right .7s linear;
+
+      &:hover {
+        padding: 0 1.5vw;
+        padding-right: 10vw;
+      }
+
+      a {
+
+        i {
+          font-size: 1.7vw;
+          padding: 1.4vw 1vw;
+          color: white;
+        }
+      }
+    }
+
+    li.facebook {
+      background: rgb(0,0,100);
+    }
+
+    li.twitter {
+      background: rgba(0,0,300, .7);
+    }
+
+    li.insta {
+      background: lighten(red, 5%);
+    }
+
+    li.youtube {
+      background: darken(red, 10%);
+    }
+  }
+
+// weather #####################################################
+div.weatherContainer {
+  margin: 5vw 0;
+
+  div.weatherBox {
+    position: relative;
+    width: 15vw;
+    float: right;
+    border-radius: 10%;
+    background: #1155CC;
+    color: white;
+    margin-right: 4vw;
+    top: -10vw;;
+
+    p {
+      font-size: 2vw;
+      text-align: center;
+      padding: 2vw 0;
+    }
+
+    div.tempAndIcon {
+      display: flex;
+      justify-content: space-around;
+      font-size: 2.3vw;
+
+      span.temp-integer {
+        font-size: 3vw;
+      }
+    }
+
+    p.show-time {
+      padding-bottom: 1vw;
+    }
+  }
+}
+
+// skills #########################################
+@keyframes skillsWidth {
+  from {width: 0;}
+  to {width: 50vw;}
+}
+
+div.skills-container {
+  margin: 0 2vw;
+
+  div.title {
+    font-size: 1vw;
+    font-weight: 700;
+  }
+
+    div.skill {
+      border: 1px solid grey;
+      width: 50vw;
+      animation: skillsWidth 5s alternate;
+
+      div {
+        height: 2vw;
+        background: blue;
+      }
+    }
+
+    @each $class, $width in ('html', 80),
+                                  ('css', 80),
+                                  ('javascript', 60),
+                                  ('react', 50),
+                                  ('redux', 50) {
+  div.#{$class} {
+    width: #{percentage($width/100)};
+  }
+}
+
+
+}
+
+// loader ####################################
+@keyframes myloader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fetching {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+div.loaderBox {
+  background: white !important;
+}
+
+div.loader {
+  background: white;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 15vw;
+  height: 15vw;
+  -webkit-animation: myloader 2s linear infinite; /* Safari */
+  animation: myloader 2s linear infinite;
+
+  div.fetching-data {
+    color: black;
+    position: absolute;
+    top: 4vw;
+    left: 3vw;
+    animation: fetching 2s linear infinite;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
