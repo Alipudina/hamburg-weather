@@ -37,8 +37,8 @@ div.foto-container {
 
 div.foto-container div {
   margin: 3vw 12vw;
-  width: 250px;
-  height: 245px;
+  width: 200px;
+  height: 190px;
 }
 
 div.foto-container div img {
@@ -48,26 +48,39 @@ div.foto-container div img {
 
 div.profile-text {
   position: relative;
-  left: 40vw;
-  top: -20vw;
+  left: 28vw;
+  top: -17vw;
   border: 1px solid red;
-  width: 35vw;
+  width: 50vw;
+  height: 190px;
+  display: flex;
   /* The typewriter cursor effect */
 }
 
+div.profile-text div.personal-details {
+  position: relative;
+  top: 110px;
+}
+
+div.profile-text div.personal-details p {
+  margin: 0;
+  padding: 0;
+}
+
 div.profile-text p.wellcome-text {
-  width: 20vw;
+  width: 31vw;
+  height: 3vw;
+  color: blue;
+  font-size: 2vw;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange;
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
+  letter-spacing: .12em;
   /* Adjust as needed */
-  animation: typing 7s steps(25, end), blink-caret 0.75s step-end infinite;
+  animation: typing 5s steps(45, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -75,7 +88,7 @@ div.profile-text p.wellcome-text {
     width: 0;
   }
   to {
-    width: 20vw;
+    width: 32vw;
   }
 }
 
@@ -139,7 +152,7 @@ div.social-icons li.youtube {
 }
 
 div.weatherContainer {
-  margin: 5vw 0;
+  margin: 2vw 5vw;
 }
 
 div.weatherContainer div.weatherBox {
@@ -183,7 +196,7 @@ div.weatherContainer div.weatherBox p.show-time {
 }
 
 div.skills-container {
-  margin: 0 2vw;
+  margin: 0 4vw;
 }
 
 div.skills-container div.title {
@@ -246,14 +259,14 @@ div.loaderBox {
 
 div.loader {
   background: white;
-  border: 16px solid #f3f3f3;
+  border: 12px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #3498db;
   width: 15vw;
   height: 15vw;
-  -webkit-animation: myloader 2s linear infinite;
+  -webkit-animation: myloader 1.5s linear infinite;
   /* Safari */
-  animation: myloader 2s linear infinite;
+  animation: myloader 1.5s linear infinite;
 }
 
 div.loader div.fetching-data {
@@ -261,7 +274,7 @@ div.loader div.fetching-data {
   position: absolute;
   top: 4vw;
   left: 3vw;
-  animation: fetching 2s linear infinite;
+  animation: fetching 1.5s linear infinite;
 }
 
 div.loader div.fetching-data p {
