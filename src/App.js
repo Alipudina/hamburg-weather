@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import './App.scss';
 import SocialIcons from './components/SocialIcons';
-import ReactIcon from './components/ReactIcon';
 import Weather from './components/Weather';
 import Skills from './components/Skills';
 import Loader from './components/Loader';
-import Foto from './components/Foto';
 import ProfileText from './components/ProfileText';
 
 const authToken = 'bd3be3a2a884168866b96b0f81237152';
@@ -30,10 +28,6 @@ class App extends Component {
     // link for icon: http://openweathermap.org/img/w/10d.png
   }
 
-  // changeCity=() => {
-  //   this.setState({city: 'Berlin'})
-  //   this.componentDidMount();
-  // }
 
   componentDidMount() {
     this.getWeather();
@@ -42,9 +36,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <ReactIcon />
-        <Foto />
+      <div className="main-container">
         <ProfileText />
         <SocialIcons/>
         {this.state.weatherComponent && <Weather
@@ -55,7 +47,7 @@ class App extends Component {
           />}
         {this.state.loaderComponent && <Loader />}
         <Skills />
-      </>
+      </div>
 
     );
   }

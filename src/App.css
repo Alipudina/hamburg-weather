@@ -1,77 +1,23 @@
-div.total-height {
-  text-align: center;
-  width: 15vw;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
-
-div.total-height .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 10vmin;
-  pointer-events: none;
-}
-
-div.total-height .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-}
-
-div.total-height .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-div.foto-container {
-  border: 1px solid black;
-}
-
-div.foto-container div {
-  margin: 3vw 12vw;
-  width: 200px;
-  height: 190px;
-}
-
-div.foto-container div img {
-  height: 100%;
-  width: 100%;
+div.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 div.profile-text {
-  position: relative;
-  left: 28vw;
-  top: -17vw;
-  border: 1px solid red;
-  width: 50vw;
+  width: 70vw;
   height: 190px;
   display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
   /* The typewriter cursor effect */
 }
-
-div.profile-text div.personal-details {
-  position: relative;
-  top: 110px;
-}
-
-div.profile-text div.personal-details p {
-  margin: 0;
-  padding: 0;
-}
-
 div.profile-text p.wellcome-text {
-  width: 31vw;
-  height: 3vw;
-  color: blue;
-  font-size: 2vw;
+  width: 63vw;
+  height: 5vw;
+  color: #670709;
+  font-size: 3vw;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange;
@@ -82,16 +28,14 @@ div.profile-text p.wellcome-text {
   /* Adjust as needed */
   animation: typing 5s steps(45, end), blink-caret 0.75s step-end infinite;
 }
-
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 32vw;
+    width: 63vw;
   }
 }
-
 @keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -100,7 +44,6 @@ div.profile-text p.wellcome-text {
     border-color: orange;
   }
 }
-
 div.social-icons {
   display: flex;
   flex-direction: column;
@@ -111,7 +54,6 @@ div.social-icons {
   left: 5vw;
   z-index: 2;
 }
-
 div.social-icons li {
   list-style-type: none;
   width: 2.5vw;
@@ -123,67 +65,52 @@ div.social-icons li {
   border-radius: 15%;
   transition: padding-right .7s linear;
 }
-
 div.social-icons li:hover {
   padding: 0 1.5vw;
   padding-right: 10vw;
 }
-
 div.social-icons li a i {
   font-size: 1.7vw;
   padding: 1.4vw 1vw;
   color: white;
 }
-
 div.social-icons li.facebook {
   background: #000064;
 }
-
 div.social-icons li.twitter {
   background: rgba(0, 0, 255, 0.7);
 }
-
 div.social-icons li.insta {
   background: #ff1a1a;
 }
-
 div.social-icons li.youtube {
   background: #cc0000;
 }
 
 div.weatherContainer {
-  margin: 2vw 5vw;
+  margin: 5vw 5vw;
 }
-
 div.weatherContainer div.weatherBox {
-  position: relative;
-  width: 15vw;
-  float: right;
+  width: 20vw;
   border-radius: 10%;
   background: #1155CC;
   color: white;
-  margin-right: 4vw;
-  top: -10vw;
 }
-
 div.weatherContainer div.weatherBox p {
   font-size: 2vw;
   text-align: center;
   padding: 2vw 0;
 }
-
 div.weatherContainer div.weatherBox div.tempAndIcon {
   display: flex;
   justify-content: space-around;
   font-size: 2.3vw;
 }
-
 div.weatherContainer div.weatherBox div.tempAndIcon span.temp-integer {
   font-size: 3vw;
 }
-
 div.weatherContainer div.weatherBox p.show-time {
-  padding-bottom: 1vw;
+  padding-bottom: 3vw;
 }
 
 @keyframes skillsWidth {
@@ -194,43 +121,34 @@ div.weatherContainer div.weatherBox p.show-time {
     width: 50vw;
   }
 }
-
 div.skills-container {
-  margin: 0 4vw;
+  margin-bottom: 4vw;
 }
-
 div.skills-container div.title {
   font-size: 1vw;
   font-weight: 700;
 }
-
 div.skills-container div.skill {
   border: 1px solid grey;
   width: 50vw;
   animation: skillsWidth 5s alternate;
 }
-
 div.skills-container div.skill div {
   height: 2vw;
   background: blue;
 }
-
 div.skills-container div.html {
   width: 80%;
 }
-
 div.skills-container div.css {
   width: 80%;
 }
-
 div.skills-container div.javascript {
   width: 60%;
 }
-
 div.skills-container div.react {
   width: 50%;
 }
-
 div.skills-container div.redux {
   width: 50%;
 }
@@ -243,7 +161,6 @@ div.skills-container div.redux {
     transform: rotate(360deg);
   }
 }
-
 @keyframes fetching {
   0% {
     transform: rotate(0deg);
@@ -252,9 +169,9 @@ div.skills-container div.redux {
     transform: rotate(-360deg);
   }
 }
-
 div.loaderBox {
   background: white !important;
+  margin-bottom: 1vw;
 }
 
 div.loader {
@@ -268,7 +185,6 @@ div.loader {
   /* Safari */
   animation: myloader 1.5s linear infinite;
 }
-
 div.loader div.fetching-data {
   color: black;
   position: absolute;
@@ -276,8 +192,9 @@ div.loader div.fetching-data {
   left: 3vw;
   animation: fetching 1.5s linear infinite;
 }
-
 div.loader div.fetching-data p {
   margin: 0;
   padding: 0;
 }
+
+/*# sourceMappingURL=App.css.map */

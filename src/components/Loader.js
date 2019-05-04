@@ -3,11 +3,6 @@ import React, { Component } from 'react';
 
 export default class Loader extends Component {
 
-  state= {}
-
-  // componentDidMount() {
-  //   setInterval(() => this.getDate(), 1000);
-  // }
 
   render() {
     return (

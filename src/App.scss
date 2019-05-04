@@ -1,89 +1,27 @@
-body {
-  // background-image: linear-gradient(cyan, yellow);
-  // background-image: linear-gradient(to right, red,orange,yellow,green,red,indigo,violet);
-}
-//############ reactIcon ######################################################################
-div.total-height {
-  text-align: center;
-  width: 15vw;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
 
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 10vmin;
-    pointer-events: none;
-  }
-
-  .App-header {
-    background-color: #282c34;
-    min-height: 10vh;
-  }
-
-  .App-link {
-    color: #61dafb;
-  }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
-// foto #####################################
-div.foto-container {
-  border: 1px solid black;
-
-  div {
-    margin: 3vw 12vw;
-    width: 200px;
-    height: 190px;
-    // 1066x1600
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
+// div.main-container ##############################
+div.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 // ## profile-text ###################################
 div.profile-text {
-  position: relative;
-  // text-align: center;
-  left: 28vw;
-  top: -17vw;
-  border: 1px solid red;
-  width: 50vw;
+  // border: 1px solid red;
+  width: 70vw;
   height: 190px;;
-  // color: white;
   display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 
-  // align-items: center;
-
-  div.personal-details {
-    position: relative;
-    top: 110px;
-
-    p {
-      margin: 0;
-      padding: 0;
-    }
-  }
 
   p.wellcome-text {
-    width: 31vw;
-    height: 3vw;
-    // border: 1px solid red;
-    color: blue;
-    font-size: 2vw;
+    width: 63vw;
+    height: 5vw;
+    color: #670709;
+    font-size: 3vw;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -96,7 +34,7 @@ div.profile-text {
 
   @keyframes typing {
     from { width: 0 }
-    to { width: 32vw }
+    to { width: 63vw }
   }
 
   /* The typewriter cursor effect */
@@ -116,7 +54,6 @@ div.social-icons {
     height: 15vw;
     position: fixed;
     top: 20vw;
-    // left: -4vw;
     left: 5vw;
     z-index: 2;
 
@@ -165,17 +102,13 @@ div.social-icons {
 
 // weather #####################################################
 div.weatherContainer {
-  margin: 2vw 5vw;
+  margin: 5vw 5vw;
 
   div.weatherBox {
-    position: relative;
-    width: 15vw;
-    float: right;
+    width: 20vw;
     border-radius: 10%;
     background: #1155CC;
     color: white;
-    margin-right: 4vw;
-    top: -10vw;;
 
     p {
       font-size: 2vw;
@@ -194,7 +127,7 @@ div.weatherContainer {
     }
 
     p.show-time {
-      padding-bottom: 1vw;
+      padding-bottom: 3vw;
     }
   }
 }
@@ -206,7 +139,7 @@ div.weatherContainer {
 }
 
 div.skills-container {
-  margin: 0 4vw;
+  margin-bottom: 4vw;
 
   div.title {
     font-size: 1vw;
@@ -250,6 +183,7 @@ div.skills-container {
 
 div.loaderBox {
   background: white !important;
+  margin-bottom: 1vw;
 }
 
 div.loader {
