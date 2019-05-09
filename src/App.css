@@ -14,7 +14,7 @@ div.profile-text {
   /* The typewriter cursor effect */
 }
 div.profile-text p.wellcome-text {
-  width: 63vw;
+  width: 64vw;
   height: 5vw;
   color: #670709;
   font-size: 3vw;
@@ -33,7 +33,7 @@ div.profile-text p.wellcome-text {
     width: 0;
   }
   to {
-    width: 63vw;
+    width: 64vw;
   }
 }
 @keyframes blink-caret {
